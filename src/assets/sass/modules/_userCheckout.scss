@@ -1,0 +1,46 @@
+.userCheckout {
+  position: relative;
+  background-color: #f8f9f8ef;
+  min-height: 100vh;
+
+  .cartEmpty {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 0px;
+
+    p {
+      color: #868686;
+      font-size: $font-m - 1;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 8px 30px;
+      background-color: #4e4e4e;
+      color: #fff;
+      border: 1px solid #4e4e4e;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: '微軟正黑體';
+      font-size: $font-xxs;
+
+      i {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: #4e4e4e;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 0px 5px #d6d6d6;
+  color: #4e4e4e;
+  padding: 30px 0px;
+  background-color: #f7f7f748;
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+
+    a {
+      display: block;
+      font-size: $font-l;
+      text-decoration: none;
+      color: #4e4e4e;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: $font-xxs;
+    color: #4e4e4e;
+  }
+}

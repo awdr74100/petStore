@@ -1,0 +1,56 @@
+.pagination {
+  margin: 20px;
+  position: relative;
+  font-family: "微軟正黑體";
+
+  .list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 25px;
+
+    &__item {
+      margin-left: 15px;
+
+      .page {
+        display: block;
+        padding: 8px 11px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #343a40;
+        transition: all 0.3s;
+        font-size: $font-xxs;
+
+        &:hover {
+          background-color: #343a40;
+          color: #fff;
+        }
+      }
+
+      .prev,
+      .next {
+        padding: 8px 11px;
+        color: #343a40;
+        transition: all 0.3s;
+        font-size: $font-xxs;
+
+        &:hover {
+          font-size: $font-l;
+        }
+      }
+
+      .disabled {
+        pointer-events: none;
+        color: #c4c4c4;
+      }
+
+      .active {
+        background-color: #343a40;
+        color: #fff;
+        padding: 6px 18px;
+        margin: 2px 0px;
+      }
+    }
+  }
+
+}

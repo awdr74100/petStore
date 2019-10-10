@@ -1,0 +1,219 @@
+.adminOrderList {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  font-family: "微軟正黑體";
+  min-height: 100vh;
+
+  .selectMode {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .icon {
+      position: absolute;
+      width: 39px;
+      height: 39px;
+      background-color: rgb(62, 134, 62);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 8px;
+      color: #fff;
+      pointer-events: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    select {
+      cursor: pointer;
+      background-color: rgb(76, 167, 76);
+      color: #fff;
+      font-size: $font-xs;
+      border-radius: 5px;
+      width: 140px;
+      height: 39px;
+      padding-left: 19px;
+      border: none;
+      -webkit-appearance: button;
+      appearance: button;
+      outline: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgb(62, 134, 62);
+        box-shadow: 1px 1px 5px rgb(62, 134, 62);
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgb(165, 165, 165);
+    color: #494949;
+
+    tr {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid rgb(190, 190, 190);
+    }
+
+    th,
+    td {
+      padding: 20px 15px;
+    }
+
+    thead {
+      color: rgb(238, 238, 238);
+      background-color: #343a40;
+    }
+
+
+    .t-s {
+      width: 100px;
+      text-align: center;
+    }
+
+    .t-m {
+      width: 130px;
+      text-align: center;
+    }
+
+    .t-user {
+      width: 130px;
+      text-align: center;
+      padding: 0px;
+    }
+
+    .t-xl {
+      flex: 0.6;
+      text-align: center;
+    }
+
+    .t-l {
+      flex: 1;
+    }
+
+    .text-paid {
+      color: rgb(76, 167, 76);
+    }
+  }
+
+  .productItem {
+    padding: 8px 0px;
+
+    .unit {
+      display: inline-block;
+      margin-left: 16px;
+      background-color: #da7b22;
+      text-align: center;
+      height: 20px;
+      line-height: 20px;
+      color: #fff;
+      width: 60px;
+      font-size: $font-xxs - 1.5;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border-color: transparent #da7b22 transparent transparent;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 1px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  .userData {
+    width: 100%;
+    position: relative;
+
+    &__btn {
+      padding: 6px 10px;
+      border: 1px solid #d44d4d;
+      background-color: #d44d4d;
+      color: #fff;
+      font-family: '微軟正黑體';
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &--active {
+        border: 1px solid #8d3232;
+        background-color: #8d3232;
+      }
+
+      &:hover {
+        border: 1px solid #8d3232;
+        background-color: #8d3232;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__content {
+      width: 25vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      top: -62px;
+      right: 120px;
+      padding: 10px 16px;
+      border: 1px solid rgb(216, 216, 216);
+      box-shadow: 0px 0px 5px rgb(206, 206, 206);
+      background-color: rgb(255, 255, 255);
+      display: none;
+      z-index: 10;
+
+      &--open {
+        display: flex;
+      }
+
+      p {
+        padding: 4px 0px;
+        line-height: 1.5;
+        text-align: left;
+        color: #3a3a3a;
+      }
+
+      &:after {
+        position: absolute;
+        right: -20px;
+        top: 68px;
+        content: "";
+        display: block;
+        border-color: transparent transparent transparent rgb(102, 102, 102);
+        border-style: solid solid solid solid;
+        border-width: 10px;
+        height: 0px;
+        width: 0px;
+      }
+    }
+  }
+
+}

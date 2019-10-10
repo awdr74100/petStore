@@ -1,0 +1,220 @@
+.userProductList {
+  position: relative;
+  background-color: #f8f9f8ef;
+
+  .sort {
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    .thisSort {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 170px;
+      padding: 10px 8px;
+      border-bottom: 1px solid #333;
+
+      span {
+        font-size: 15px;
+        color: #333;
+      }
+
+      i {
+        font-size: 12px;
+        color: #333;
+        transition: all 0.3s;
+      }
+    }
+
+    ul {
+      max-height: 0px;
+      overflow: hidden;
+      position: absolute;
+      top: 40px;
+      z-index: 20;
+      transition: all 0.3s;
+      background-color: #fff;
+      width: 100%;
+
+      li {
+        padding: 10px 8px;
+        font-size: 15px;
+        color: #333;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: #4ca74c;
+          color: #fff;
+        }
+      }
+    }
+
+    &:hover ul {
+      max-height: 300px;
+    }
+
+    &:hover i {
+      transform: rotate(180deg);
+    }
+  }
+
+  .productList {
+
+    &__item {
+      margin-top: 26px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px 40px 160px 40px;
+      overflow: hidden;
+      transition: all 0.3s;
+      border: 1px solid rgb(238, 238, 238);
+
+      .img {
+        width: 100%;
+        height: 200px;
+        background-image: url("https://s.yimg.com/zp/images/EC1BF93E7EE1BBDC4F062500F7AA1CB76DF1F8A7");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &:hover .detail {
+        top: 0px;
+      }
+
+      &:hover .content {
+        bottom: 0px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .detail {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -180px;
+      background-color: rgba(255, 255, 255, 0.205);
+      transition: all 0.3s;
+
+      &__view {
+        margin: 80px 0px;
+        padding: 10px 12px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: #fff;
+          color: #333333;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+    }
+
+    .content {
+      z-index: 10;
+      position: absolute;
+      bottom: -55px;
+      width: 100%;
+      padding: 10px 20px 10px 20px;
+      background-color: rgb(255, 255, 255);
+      transition: all 0.3s;
+
+      h4 {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333333;
+      }
+
+      .group {
+        padding-top: 10px;
+        font-size: $font-xs;
+        color: #ddae12;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .price {
+        padding-top: 10px;
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .o-price {
+          color: #AAA;
+          text-decoration: line-through;
+          font-size: $font-xs;
+
+          &--active {
+            text-decoration: none;
+            font-size: $font-m;
+            font-weight: bold;
+            color: rgb(76, 167, 76);
+          }
+        }
+
+        .discount {
+          margin-left: 10px;
+          font-size: $font-m;
+          font-weight: bold;
+          color: rgb(76, 167, 76);
+        }
+      }
+
+
+      .addCart {
+        padding: 6px 15px;
+        border-radius: 5px;
+        font-size: $font-xxs;
+        background-color: #FFF;
+        border: 1px solid rgb(76, 167, 76);
+        color: rgb(76, 167, 76);
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &--active {
+          pointer-events: none;
+
+        }
+
+        span {
+          margin-right: 10px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          background-color: rgb(76, 167, 76);
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.checkoutStep {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 120px 60px 120px;
+
+  &__item {
+    position: relative;
+    flex: 0.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .step {
+      display: block;
+      width: 46px;
+      height: 46px;
+      color: #fff;
+      font-size: $font-m;
+      text-align: center;
+      background-color: #4e4e4e;
+      border-radius: 50%;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--active {
+        background-color: #4ca74c;
+      }
+    }
+
+    .name {
+      margin-top: 12px;
+      color: #4e4e4e;
+      font-size: $font-xs;
+
+      &--active {
+        color: #4ca74c;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      display: block;
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: #e0e0e0;
+    }
+  }
+
+  &--active {
+    &::after {
+      background-color: #4ca74c;
+      // background-image: linear-gradient(to right, #4ca74c, #d6d6d6 60%);
+    }
+  }
+
+  &--cancel {
+    &::after {
+      height: 0px;
+    }
+  }
+}

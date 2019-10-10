@@ -1,0 +1,191 @@
+.userContact {
+  position: relative;
+  background-color: #f8f9f8ef;
+
+  .location {
+    width: 100%;
+    position: relative;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: 0px 0px 8px rgb(206, 206, 206);
+    margin: 20px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.541);
+
+    .company {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0px 20px;
+
+      h2 {
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: $font-xl - 1;
+        padding-bottom: 30px;
+        color: #4e4e4e;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          bottom: 8px;
+          width: 60%;
+          height: 4px;
+          background-color: rgb(48, 199, 73);
+        }
+      }
+
+      .address {
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: $font-xxs + 1;
+        margin-top: 16px;
+      }
+
+      span {
+        color: #4e4e4e;
+        font-size: $font-xxs;
+      }
+    }
+  }
+
+  .message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .name {
+      width: 100%;
+      text-align: center;
+      padding: 8px 0px;
+      border-bottom: 2px solid #4e4e4e;
+      font-size: $font-m;
+      font-weight: bold;
+      color: #4e4e4e;
+
+      i {
+        margin-left: 10px;
+        font-size: $font-m;
+      }
+    }
+
+    .ex {
+      width: 100%;
+      text-align: center;
+      font-size: $font-xxs + 1;
+      margin-top: 30px;
+      color: rgb(122, 122, 122);
+    }
+  }
+
+  .form {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    .inputRow {
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .errorMsg {
+      margin-top: 6px;
+      margin-left: 80px;
+      color: #f03d3d;
+    }
+
+    .error {
+      border: 1px solid #f03d3d;
+    }
+
+    label {
+      width: 80px;
+      color: #3a3a3a;
+      // font-weight: bold;
+
+      &.remark {
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+    }
+
+    input {
+      flex: 1;
+      height: 35px;
+      border: 1px solid rgb(204, 204, 204);
+      padding-left: 10px;
+      font-size: $font-xs;
+      color: #4e4e4e;
+      font-family: '微軟正黑體';
+      background-color: #fcfcfcea;
+      border-radius: 5px;
+
+      &[type=email] {
+        margin-left: 20px;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px #aaaaaa;
+      }
+    }
+
+    textarea {
+      flex: 1;
+      border: 1px solid rgb(204, 204, 204);
+      padding: 10px;
+      font-size: $font-xs;
+      color: #4e4e4e;
+      font-family: '微軟正黑體';
+      background-color: #fcfcfcea;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px #aaaaaa;
+      }
+    }
+
+    .btn {
+      margin-left: 80px;
+      padding: 8px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: '微軟正黑體';
+      font-size: $font-xxs;
+      background-color: #4e4e4e;
+      color: #fff;
+      border: 1px solid #4e4e4e;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: #4e4e4e;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px #aaaaaa;
+      }
+    }
+
+  }
+
+}
